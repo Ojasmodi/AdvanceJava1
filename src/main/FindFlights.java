@@ -1,7 +1,6 @@
 package main;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
+
 import java.util.*;
 
 import Utilities.FareComparator;
@@ -23,7 +22,7 @@ public class FindFlights {
 					&& (flight.getDepartureLocation()).equals(tempFlight.getDepartureLocation())
 					&& (tempFlight.getValidityOfFlight().compareTo(flight.getValidityOfFlight()) > 0)
 					&& tempFlight.isSeatAvailability()) {
-				if (flight.getFlightClass().equalsIgnoreCase("b") && tempFlight.getFlightClass().contains("b")) {
+				if (flight.getFlightClass().equalsIgnoreCase("b") && tempFlight.getFlightClass().contains("B")) {
 					tempFlight.setFare(tempFlight.getFare() * Constants.BUSINESS_CLASS_MULTIPLIER);
 					resultedFlights.add(tempFlight);
 				} else if (flight.getFlightClass().equalsIgnoreCase("e")) {
