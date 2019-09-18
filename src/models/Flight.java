@@ -86,4 +86,5 @@ public class Flight {
 		this.fare = fare;
 	}
 	
+	
 }
